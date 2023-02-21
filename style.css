@@ -1,0 +1,624 @@
+:root{
+
+    --blue: rgb(41, 57, 206);
+    --grey:grey;
+    --white: white;
+}
+
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+
+    width: 100%;
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(41, 57, 206);
+ 
+}
+.back-arrow{
+
+    color: white;
+     position: absolute;
+     bottom: 2%;
+     font-size: 2em;
+     border: solid;
+     animation:  rotate infinite ;
+}
+
+@keyframes rotate {
+    
+     0%{
+        transform: rotateX(360deg);
+     }
+     100%{
+        transform: rotateX(360deg);
+     }
+}
+.formCont{
+
+    width: 50%;
+    height:80vh;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 1px 1px 10px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    
+}
+
+.formCont .leftSide{
+
+    height: 100%;
+    width: 40%;
+    background-image: url('assets/images/bg-sidebar-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.leftSide .navCont{
+   
+    height: 60%;
+    width: 100%;
+    background:rgba(255, 255, 255, 0);
+    
+
+}
+
+.navCont .navItem{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+   
+    width: 100%;
+    height: 25%;
+    background: rgba(255, 255, 255, 0);
+   
+
+}
+
+.navItem .info{
+
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.info *{
+
+    height: 25%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: light;
+}
+.navItem .button{
+   
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button * {
+    height: 50px;
+    width: 50px;
+    border: solid 1px;
+    border-radius: 50%;
+    background: transparent;
+    --webkit-backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 1px 1px 4px black;
+}
+
+
+/*styling right side*/
+
+.formCont .rightSide{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 20px;
+
+}
+
+.rightSide .top{
+    margin-top: 10%;
+    height:15%;
+    width: 100%;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid white;
+}
+
+.rightSide .top *{
+  
+    width: 100%;
+    height: 50%;
+    color: white;
+    padding: 5px;
+    color: var(--blue);
+}
+
+.rightSide .top .title{
+
+    display: flex;
+    align-items: center;
+    padding: 3px;
+}
+
+.rightSide .top .title h2{
+
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+    color: black;
+}
+
+.rightSide .top .para{
+    display: flex;
+    align-items: start;
+}
+
+.rightSide .top .para p{
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    font-weight:lighter;
+    color: grey;
+}
+
+.rightSide .form{
+
+    width: 100%;
+    height: 90%;
+
+    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+  
+}
+
+.rightSide .form .groupedInput{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px;
+}
+
+.rightSide .form .groupedInput input{
+   width: 95.5%;
+   height: 5vh;
+   padding: 10px;
+   margin-bottom: 6%;
+}
+.rightSide .form .groupedInput label{
+    width: 100%;
+    height: 5vh;
+    color: var(--blue);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+ }
+
+.rightSide  .bottom{
+
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+
+
+.rightSide .bottom .inview_btn{
+    height: 100%;
+    width: 40%;
+    background-color: var(--blue);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.5s ease-in-out;
+    margin-right: 5%;
+
+}
+
+
+.rightSide .bottom button:hover{
+    transform: scale(1.1);
+    background: rgb(83, 27, 121);
+ 
+}
+
+.active{
+
+    background:rgba(3, 3, 3, 0.384);
+}
+
+/*replacement component step2*/
+
+.step2Cont{
+   
+    width: 100%;
+    height: 90%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: all 3000ms ease-in ;
+}
+
+.step2Cont-top{
+
+    width: 100%;
+    height: 60%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+}
+
+.step2Cont-top .cont{
+
+    height: 150px;
+    width:120px;
+    box-shadow: 0px 1px 3px black;
+    margin-bottom: 15%;
+    display: flex;
+    padding: 5px;
+    background: rgba(164, 164, 197, 0.137);
+}
+
+.step2Cont-top .cont .cont-left {
+
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+   
+}
+
+.step2Cont-top .cont .cont-right {
+
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+  
+}
+
+.cont-left .cont-left-icon{
+    width: 100%;
+    height: 60%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-size: 16px;
+}
+
+.cont-left .cont-left-icon ion-icon{
+    width: 50%;
+    height: 50%;
+    border: none;
+    color: var(--blue);
+}
+
+.cont-left h3{
+    width: 100%;
+    height: 20%;
+    color:var(--grey);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+}
+.cont-left span{
+    width: 100%;
+    height: 20%;
+    color:var(--grey);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   
+}
+.step2Cont .bottom{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.step2Cont .bottom .items{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    margin-top: -10%;
+    border-radius: 6px;
+    background: rgba(82, 82, 97, 0.089);
+    box-shadow: 0px 1px 2px black;
+}
+
+.step2Cont .bottom .items a{
+    font-weight: bold;
+    font-size: 16px;
+   text-decoration: none;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.step2Cont .bottom .items a:hover{
+   
+   transition: color 800ms ease-in-out;
+   color: rgb(33, 118, 151);
+}
+.step2Cont .bottom  .inview_btn{
+    width: 45%;
+    height: 35%;
+    border: solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    margin-top: 20%;
+    margin-left: 60%;
+}
+
+/*replacement component step3*/
+
+.step3Cont{
+    width: 100%;
+    height: 90%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    gap:5%;
+    padding: 15px;
+}
+
+.step3Cont .divs{
+
+    width: 90%;
+    height: 20%;
+    border: solid 1px var(--blue);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step3Cont .divs .left{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.step3Cont .divs .center{
+
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+.step3Cont .divs .center h3{
+color:var(--blue);
+
+width: 100%;
+height: 50%;
+display: flex;
+flex-direction: column;
+align-content: center;
+justify-content: flex-end;
+text-align: left;
+padding: 5px;
+font-weight: bold;
+font-size: 12px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.step3Cont .divs .center p{
+    color: rgb(92, 92, 92);
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+
+.step3Cont .divs .right{
+
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+
+
+.step3Cont .buttonCont{
+
+    width: 90%;
+    height: 20%;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.step3Cont .buttonCont .inview_btn{
+    height: 80%;
+    width: 40%;
+    background-color: var(--blue);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.5s ease-in-out;
+    margin-right: 5%;
+}
+
+.step3Cont .buttonCont .inview_btn:hover{
+    transform: scale(1.1);
+    background: rgb(83, 27, 121);
+ 
+}
+
+
+/*replacement component step3*/
+
+.step4Cont{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ 
+    padding: 10px;
+}
+
+.step4Cont .top{
+    width: 100%;
+    height: 60%;
+    background: rgba(42, 117, 151, 0.377);
+    border-radius: 6px;
+}
+
+.step4Cont .bottom{
+    width: 100%;
+    height: 20%;
+
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.step4Cont .bottom .left{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+}
+.step4Cont .bottom .left p{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: rgb(65, 64, 64);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.step4Cont .bottom .right{
+    width: 20%;
+    height: 100%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(65, 64, 64);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.step4Cont .butt{
+    width: 100%;
+    height: 20%;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+}
+
+
+.step4Cont .butt .inview_btn{
+    height: 80%;
+    width: 40%;
+    background-color: var(--blue);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.5s ease-in-out;
+    margin-right: 5%;
+}
+
+
+.step4Cont .butt .inview_btn:hover{
+    transform: scale(1.1);
+    background: rgb(83, 27, 121);
+ 
+}
